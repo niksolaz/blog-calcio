@@ -10,7 +10,21 @@
 	<body>
 
 		<div class="page-header"> 
-			<h1><a href="http://www.nicolasolazzo.com/"> NikSolaz</a> Blog Test made with Python</h1> 
+			{% if user.is_authenticated %}
+				<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+			{% endif %}
+			<h1><a href="http://pydog.pythonanywhere.com/"><span class="glyphicon glyphicon-home"></span></a> Blog Test made with Python </h1> 
+			<h6><a href="http://www.nicolasolazzo.com/">blog site by Nicola Solazzo</a></h6>
+			<p> visit my
+				<a href="https://github.com/niksolaz">
+					GitHub
+				</a>
+			</p>
+			<p> visit my
+				<a href="https://it.linkedin.com/in/nicolasolazzo">
+					Linkedin
+				</a>
+			</p>
 		</div>
 		
 		<div class="content container">
@@ -21,6 +35,5 @@
 		        </div>
 		    </div>
 		</div>
-		
 	</body>
 </html>
